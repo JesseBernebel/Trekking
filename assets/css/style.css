@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .luxbar-menu {
   background-color: white;
 }
@@ -22,42 +21,71 @@ nav {
   width: 100vw;
 }
 
-.wrapper-card {
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 40px auto;
-  width: 77%;
+.animation-element {
+  opacity: 0;
+  transition: all 500ms linear;
+  transform: translate3d(0px, 20px, 0px);
+  transition-delay: 1s;
+  position: relative;
+}
+
+.animation-element.in-view {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/*cajas Cartas*/
+.card__imagen {
+  background-image: url(../img/bg-price.svg);
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.card__fondo {
+  background-color: #333745;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: x-l;
+}
+
+.card-price {
+  text-align: center;
+  color: #221D23;
+}
+
+.card-title {
+  text-align: center;
+  color: #726f73;
+}
+
+.card__precio {
+  color: #fff;
+  text-align: center;
 }
 
 .card {
   background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 1px #221D23;
   flex: 1;
-  margin: 8px;
+  margin: 20px 60px;
   padding: 30px;
   position: relative;
-  text-align: center;
-  transition: all 0.5s ease-in-out;
+  text-align: left;
+  width: 300px;
 }
 .card.popular {
   margin-top: -10px;
   margin-bottom: -10px;
 }
-.card.popular .card-title h3 {
-  color: #3498db;
-  font-size: 22px;
-}
-.card.popular .card-price {
-  margin: 50px;
-}
-.card.popular .card-price h1 {
-  color: #3498db;
-  font-size: 60px;
-}
 .card.popular .card-action button {
-  background-color: #3498db;
-  border-radius: 80px;
+  background-color: #2ab7ca;
   color: #fff;
   font-size: 17px;
   margin-top: -15px;
@@ -65,126 +93,56 @@ nav {
   height: 80px;
 }
 .card.popular .card-action button:hover {
-  background-color: #2386c8;
+  background-color: #249cac;
   font-size: 23px;
 }
 .card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-ribbon {
-  position: absolute;
-  overflow: hidden;
-  top: -10px;
-  left: -10px;
-  width: 114px;
-  height: 112px;
-}
-.card-ribbon span {
-  position: absolute;
-  display: block;
-  width: 160px;
-  padding: 10px 0;
-  background-color: #3498db;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 13px;
-  text-transform: uppercase;
-  text-align: center;
-  left: -35px;
-  top: 25px;
-  transform: rotate(-45deg);
-}
-.card-ribbon::before, .card-ribbon::after {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  display: block;
-  border: 5px solid #2980b9;
-  border-top-color: transparent;
-  border-left-color: transparent;
-}
-.card-ribbon::before {
-  top: 0;
-  right: 0;
-}
-.card-ribbon::after {
-  bottom: 0;
-  left: 0;
-}
-
-.card-title h3 {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 15px;
-  text-transform: uppercase;
-}
-.card-title h4 {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.card-price {
-  margin: 60px 0;
-}
-.card-price h1 {
-  font-size: 46px;
-}
-.card-price h1 sup {
-  font-size: 15px;
-  display: inline-block;
-  margin-left: -20px;
-  width: 10px;
-}
-.card-price h1 small {
-  color: rgba(0, 0, 0, 0.3);
-  display: block;
-  font-size: 11px;
-  text-transform: uppercase;
+  box-shadow: 0 8px 20px #221D23;
 }
 
 .card-description ul {
   display: block;
-  list-style: none;
-  margin: 60px 0;
-  padding: 0;
+  margin: 20px 0;
+  padding-left: 20px;
+  padding-bottom: 30px;
 }
 .card-description li {
-  color: rgba(0, 0, 0, 0.6);
+  color: #221D23;
   font-size: 15px;
   margin: 0 0 15px;
 }
-.card-description li::before {
-  font-family: FontAwesome;
-  content: "";
-  padding: 0 5px 0 0;
-  color: rgba(0, 0, 0, 0.15);
-}
-
-.card-action button {
+.card-description .card-action button {
+  position: absolute;
+  bottom: 20px;
   background: transparent;
-  border: 2px solid #3498db;
-  color: #3498db;
+  border: 2px solid #2ab7ca;
+  color: #2ab7ca;
   cursor: pointer;
   display: block;
   font-size: 15px;
   font-weight: bold;
   padding: 20px;
-  width: 100%;
+  width: 80%;
   height: 60px;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
-.card-action button:hover {
-  background-color: #3498db;
-  box-shadow: 0 2px 4px #196090;
+.card-description .card-action button:hover {
+  background-color: #2ab7ca;
+  box-shadow: 0 2px 4px #186b76;
   color: #fff;
   font-size: 17px;
 }
-
-section {
-  font-family: "Raleway", serif;
-  background-image: url(../images/bg-price.svg);
+.card-description section {
+  background-image: url(../../images/bg-price.svg) !important;
   width: 100vw;
-  height: auto;
+}
+.card-description main {
+  font-family: "Open Sans", sans-serif;
+}
+.card-description .titulocara {
+  display: flex;
+  justify-content: center;
 }
 
 footer {
