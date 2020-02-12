@@ -1,3 +1,11 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 .luxbar-menu {
   background-color: white;
 }
@@ -85,7 +93,7 @@ h2 {
   margin-bottom: -10px;
 }
 .card.popular .card-action button {
-  background-color: #2ab7ca;
+  background-color:   #2ab7ca;
   color: #fff;
   font-size: 17px;
   margin-top: -15px;
@@ -111,7 +119,8 @@ h2 {
   font-size: 15px;
   margin: 0 0 15px;
 }
-.card-description .card-action button {
+
+.card-action button {
   position: absolute;
   bottom: 20px;
   background: transparent;
@@ -127,20 +136,23 @@ h2 {
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
-.card-description .card-action button:hover {
+.card-action button:hover {
   background-color: #2ab7ca;
   box-shadow: 0 2px 4px #186b76;
   color: #fff;
   font-size: 17px;
 }
-.card-description section {
+
+section {
   background-image: url(../../images/bg-price.svg) !important;
   width: 100vw;
 }
-.card-description main {
+
+main {
   font-family: "Open Sans", sans-serif;
 }
-.card-description .titulocara {
+
+.titulocara {
   display: flex;
   justify-content: center;
 }

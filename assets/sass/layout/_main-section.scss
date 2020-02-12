@@ -22,16 +22,19 @@
     padding: 0;
     
 }
+
 .card__fondo {
     background-color: $onyx;
     margin: 0;
     padding: 0;
+
 }
 h2 {
     margin: 0;
     font-size: x-l;
     
 }
+
 .card-price{
     text-align: center;
     color: $raisin-black;
@@ -61,7 +64,7 @@ h2 {
         margin-bottom: -10px; 
         .card-action {
             button {
-                background-color: $ball-blue;
+                background-color: $ball-blue;
                 color: $white;
                 font-size: 17px;
                 margin-top: -15px;
@@ -79,7 +82,7 @@ h2 {
     }
 }
 .card-description {
-    
+   
     ul {
         display: block;
         margin: 20px 0;
@@ -90,8 +93,8 @@ h2 {
         color: $raisin-black;
         font-size: 15px;
         margin: 0 0 15px;
-      }
-
+    }
+}
 .card-action {
     
     button {
@@ -134,5 +137,4 @@ main{
     display: flex;
     justify-content: center;
     
-}
 }
